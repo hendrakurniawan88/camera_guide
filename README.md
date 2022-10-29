@@ -1,16 +1,28 @@
-# camera_guide
+# Flutter Camera Guide
 
-A new Flutter project.
+Add camera guide layer on Flutter Camera
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+# Pre Setup (Packages)
 
-A few resources to get you started if this is your first Flutter project:
+Flutter 3.3.2
+Camera
+Fpdart
+Go Router
+Hooks Riverpod
+Logger
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Android Requirement
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+minSDK: 21
+
+# Android Permission
+
+\<uses-permission android:name="android.permission.CAMERA" \/>
+
+# Riverpod Setup
+
+Set ProviderScope on
+
+> main.dart
