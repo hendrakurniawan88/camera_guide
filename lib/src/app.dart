@@ -1,6 +1,6 @@
+import 'package:camera_guide/src/home_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'router/app_router.dart';
+import 'package:go_router/go_router.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -11,9 +11,17 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routeInformationParser: appRouter.routeInformationParser,
-      routerDelegate: appRouter.routerDelegate,
-      routeInformationProvider: appRouter.routeInformationProvider,
+      routerConfig: GoRouter(
+        routes: [
+          GoRoute(
+            path: '/',
+            name: HomeScreen.routeName,
+            pageBuilder: (context, state) => NoTransitionPage(
+              child: HomeScreen(),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
