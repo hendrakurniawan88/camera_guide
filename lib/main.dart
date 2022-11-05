@@ -5,6 +5,7 @@ import 'src/app.dart';
 
 void main() {
   const myApp = MyApp();
+
   runApp(
     const ProviderScope(
       child: myApp,

@@ -9,15 +9,17 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 final imageResultProvider = StateProvider<XFile?>((ref) => null);
 
 class SelfiePreviewScreen extends HookConsumerWidget {
+  final XFile imageResult;
   const SelfiePreviewScreen({
     super.key,
+    required this.imageResult,
   });
 
   static const routeName = 'selfie-preview-screen';
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final imageResult = ref.watch(imageResultProvider);
+    // final imageResult = ref.watch(imageResultProvider);
 
     return WillPopScope(
       onWillPop: () async {
@@ -38,11 +40,9 @@ class SelfiePreviewScreen extends HookConsumerWidget {
                 child: AspectRatio(
                   // aspectRatio: cameraController.value.aspectRatio / 2,
                   aspectRatio: 1 / 1,
-                  child: Container(
-                    child: Image.file(
-                      File(imageResult!.path),
-                      fit: BoxFit.cover,
-                    ),
+                  child: Image.file(
+                    File(imageResult!.path),
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
