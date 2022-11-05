@@ -5,7 +5,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(brightness: Brightness.dark, primaryColor: Colors.blueGrey),
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: Colors.blueAccent,
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('MaterialApp Theme'),
