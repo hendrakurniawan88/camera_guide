@@ -2,6 +2,8 @@ import 'package:camera_guide/src/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import 'profile_screen.dart';
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
@@ -16,10 +18,17 @@ class MyApp extends StatelessWidget {
           GoRoute(
             path: '/',
             name: HomeScreen.routeName,
-            pageBuilder: (context, state) => NoTransitionPage(
+            pageBuilder: (context, state) => const NoTransitionPage(
               child: HomeScreen(),
             ),
-          )
+          ),
+          GoRoute(
+            path: '/profile',
+            name: ProfileScreen.routeName,
+            pageBuilder: (context, state) => const NoTransitionPage(
+              child: ProfileScreen(),
+            ),
+          ),
         ],
       ),
     );
