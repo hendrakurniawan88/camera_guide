@@ -25,4 +25,13 @@ minSDK: 21
 
 Set ProviderScope on
 
-> main.dart
+# Github Repository
+
+https://github.com/hendrakurniawan88/camera_guide
+
+# Link Tutorial:
+
+Part 1: https://youtu.be/OUiZ311JYPo
+Part 2: https://youtu.be/mzFG1RsUNTM
+
+Happy coding and don't forget to "Concept your Code"...
